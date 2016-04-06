@@ -1,0 +1,75 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox - Holy Grail Example</title>
+</head>
+<body>
+  <header>Header</header>
+  <div class="container">
+    <section class="main">
+      <h1>Main Section</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, qui totam placeat ullam eligendi itaque perferendis similique aliquam inventore tenetur. Eveniet quisquam unde vitae expedita voluptates soluta in obcaecati recusandae.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, voluptas autem sed a rem impedit quidem facere dolore praesentium optio provident minus deleniti eveniet ex cum fuga perferendis illum molestiae!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, repellendus, nobis hic molestias eveniet perferendis nesciunt voluptate ipsum impedit quo a veritatis porro qui commodi expedita? Nostrum enim sed ab.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, aspernatur reiciendis animi sequi ducimus odit ad quos libero fugiat vitae natus optio dolores reprehenderit enim aliquid necessitatibus deleniti voluptatum quod.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, cumque, eveniet, veritatis, quae esse delectus non omnis incidunt nihil saepe labore neque fugiat praesentium. Nulla quam pariatur eos hic tempore.
+      </p>
+    </section>
+    <aside>
+      <h1>Sidebar</h1>
+      <p>The sidebar doesn't have as much content as the main section on the left, and yet it expands to the same height.</p>
+    </aside>
+  </div>
+  <footer>Footer</footer>
+</body>
+
+<style>
+  body {
+    color: #fff;
+    font-size: 1.1em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  header,
+  footer {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: #00B2FF;
+  }
+
+  section,
+  aside {
+    background-color: #FF9519;
+    color: #eee;
+    padding: 3em 1.5em;
+    margin: 1% 0;
+  }
+
+  section {
+    flex: 2 1 500px;
+    margin-right: 1%;
+  }
+
+  aside {
+    flex: 1 2 250px;
+  }
+
+  .container {
+    display: flex;
+    align-items: stretch;
+  }
+
+  @media screen and (max-width: 500px) {
+    .container {
+      flex-direction: column;
+    }
+
+    section {
+      margin-right: 0;
+      flex-basis: auto;
+    }
+  }
+</style>
+</html>
